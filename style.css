@@ -1,0 +1,77 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('farm.jpg') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* Counter text */
+#counter {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+/* Egg image */
+#egg {
+  width: 220px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+/* Message text */
+#message {
+  margin-top: 22px;
+  font-size: 20px;
+  color: gold;
+  text-align: center;
+  max-width: 90%;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+/* ---------------- VFX ---------------- */
+
+/* Shake on tap */
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-6px); }
+  50%  { transform: translateX(6px); }
+  75%  { transform: translateX(-6px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.2s;
+}
+
+/* Glow while holding */
+.glow {
+  box-shadow: 0 0 25px 8px rgba(255, 215, 0, 0.9);
+  border-radius: 50%;
+}
+
+/* Pop when cracked */
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+.pop {
+  animation: pop 0.35s ease;
+}
