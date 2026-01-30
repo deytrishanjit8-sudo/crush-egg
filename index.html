@@ -3,16 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Crush Egg</title>
+
+  <!-- Mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="counter">Taps left: 1000</div>
+  <!-- SPLASH SCREEN -->
+  <div id="splash">
+    <img src="egg.png" alt="Egg Logo">
+    <p>Crush Egg</p>
+  </div>
 
-  <img id="egg" src="egg.png" draggable="false">
+  <!-- GAME CONTAINER -->
+  <div id="game">
+    <div id="counter">Taps left: <span id="count">1000</span></div>
 
-  <div id="message"></div>
+    <img
+      id="egg"
+      src="egg.png"
+      alt="Egg"
+    >
 
+    <p id="quote">Tap the egg to test your destiny…</p>
+  </div>
+
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
